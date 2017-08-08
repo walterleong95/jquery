@@ -1,8 +1,4 @@
-Authors ordered by first contribution.
-
-
-<Added by Pui Yan>
-
+Authors ordered by first contribution
 
 John Resig <jeresig@gmail.com>
 Gilles van den Hoven <gilles0181@gmail.com>
@@ -303,4 +299,14 @@ Alex Louden <alex@louden.com>
 Alex Padilla <alexonezero@outlook.com>
 南漂一卒 <shiy007@qq.com>
 karan-96 <karanbatra96@gmail.com>
+Boom Lee <teabyii@gmail.com>
+Andreas Solleder <asol@num42.de>
+CDAGaming <cstack2011@yahoo.com>
+Pierre Spring <pierre@nelm.io>
+Shashanka Nataraj <shashankan.10@gmail.com>
+Erik Lax <erik@datahack.se>
 Walter Leong <leonghoiweng@hotmail.com>
+kokkuan01 <kokkuan01@gmail.com>
+See Lem <seelem@gmail.com>
+puiyan69 <puiyan69@gmail.com>
+walterleong95 <leonghoiweng@hotmail.com>
