@@ -1,7 +1,7 @@
 define( [
 	"../core",
 	"../css",
-	"../blah
+	"../blah"
 ], function( jQuery ) {
 
 "use strict";
