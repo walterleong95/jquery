@@ -4,3 +4,10 @@ node_js:
 - "4"
 - "6"
 - "8"
+sudo: required
+addons:
+  code_climate:
+    repo_token: c59520b1716935e7794c680c04147050dcbd342a
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
