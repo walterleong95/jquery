@@ -18,7 +18,10 @@ RUN cd jquery/
 #Install Grunt
 RUN npm install -g grunt-cli
 
+#Install Npm Essentials
+RUN npm install
+
 #Build command
-RUN npm run-script build
+RUN npm run build
 
 RUN exit
