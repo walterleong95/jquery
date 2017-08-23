@@ -32,7 +32,7 @@
 7. Docker setup
    - Make sure that docker has been installed in your machine.
    - Enter the command "***docker pull kokkuan01/jquery***
-"
+
 -----------------------------------------------
 Any queries please contact via email / whatsapp:
 **Walter Leong - walterleong.95@1utar.my / 018-2878594**

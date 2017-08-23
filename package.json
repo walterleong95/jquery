@@ -23,7 +23,9 @@
     "url": "https://github.com/jquery/jquery/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "istanbul": "0.4.5"
+  },
   "devDependencies": {
     "babel-preset-es2015": "6.24.1",
     "commitplease": "2.7.10",
