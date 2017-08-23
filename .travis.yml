@@ -7,7 +7,9 @@ node_js:
 addons:
   code_climate:
     repo_token: c59520b1716935e7794c680c04147050dcbd342a
-after_success:
+services: docker
+install:
   - npm install -g codeclimate-test-reporter
+  - docker pull kokkuan01/jquery
+after_success:
   - codeclimate-test-reporter < lcov.info
-sudo: required
