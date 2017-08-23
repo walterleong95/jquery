@@ -6,10 +6,13 @@ node_js:
 - "8"
 services: docker
 script:
-  - docker pull kokkuan01/jquery
+  - docker build kokkuan01/jquery
 addons:
   code_climate:
     repo_token: c59520b1716935e7794c680c04147050dcbd342a
 after_success:
-  - codeclimate-test-reporter < lcov.info
   - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
+  - git add .
+  - git commit -m "generated test report"
+  - git push
