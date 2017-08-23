@@ -1,13 +1,4 @@
 sudo: false
-env:
-  global:
-    - CC_TEST_REPORTER_ID=9992bce7d180c3c7f40cb8e7877aed1c0fea3865adec926436ed0aa71002e75e
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
-rvm:
-  - 2.2.0
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
 language: node_js
 node_js:
 - "4"
@@ -15,7 +6,8 @@ node_js:
 - "8"
 services: docker
 script:
-  - bundle exec rspec
+  - npm install -g codeclimate-test-reporter
+  - CODECLIMATE_REPO_TOKEN=c59520b1716935e7794c680c04147050dcbd342a codeclimate-test-reporter < lcov.info
   - docker build docker
 addons:
   code_climate:
