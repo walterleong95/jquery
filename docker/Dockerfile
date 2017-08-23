@@ -19,6 +19,6 @@ RUN cd jquery/
 RUN npm install -g grunt-cli
 
 #Build command
-RUN npm run build
+RUN npm run-script build
 
 RUN exit
