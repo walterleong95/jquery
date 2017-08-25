@@ -24,6 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eslint": "4.5.0",
     "istanbul": "0.4.5"
   },
   "devDependencies": {

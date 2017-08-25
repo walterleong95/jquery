@@ -15,7 +15,7 @@ commit_report_files(){
 }
 
 upload_files(){
-	git remote add origin-scc_project https://github.com/walterleong95/jquery.git
+	git remote add origin-scc_project https://7ab01452590ca573641dd950246c30f4d2c7d4f8.github.com/walterleong95/jquery.git
 	  git push --quiet --set-upstream origin-scc_project scc_project
 	 }
 
