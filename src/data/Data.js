@@ -158,4 +158,4 @@ Data.prototype = {
 };
 
 return Data;
-} )
+} );
