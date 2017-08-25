@@ -5,19 +5,18 @@ node_js:
 - "6"
 - "8"
 services: docker
+addons:
+  code_climate:
+    repo_token: 327a6a2090e4f706f77fff811d99d522228a35ef
 before-script:
   - npm install -g istanbul
 script:
   - npm run build
   - npm test
   - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
+  - bash push.sh
   - docker build docker
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
-addons:
-  code_climate:
-    repo_token: 327a6a2090e4f706f77fff811d99d522228a35ef
-after_success:
-  - npm install -g codeclimate-test-reporter
-  - codeclimate-test-reporter < lcov.info
-  - bash push.sh
+ 
