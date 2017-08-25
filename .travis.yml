@@ -4,11 +4,11 @@ node_js:
 - "4"
 - "6"
 - "8"
-# services: docker
-# script:
-#   - npm install -g codeclimate-test-reporter
-#   - CODECLIMATE_REPO_TOKEN=9992bce7d180c3c7f40cb8e7877aed1c0fea3865adec926436ed0aa71002e75e codeclimate-test-reporter < coverage/lcov.info
-#   - docker build docker
-# addons:
-#   code_climate:
-#     repo_token: 9992bce7d180c3c7f40cb8e7877aed1c0fea3865adec926436ed0aa71002e75e
+services: docker
+script:
+  - npm install -g codeclimate-test-reporter
+  - CODECLIMATE_REPO_TOKEN=9992bce7d180c3c7f40cb8e7877aed1c0fea3865adec926436ed0aa71002e75e codeclimate-test-reporter < coverage/lcov.info
+  - docker build docker
+addons:
+  code_climate:
+    repo_token: 9992bce7d180c3c7f40cb8e7877aed1c0fea3865adec926436ed0aa71002e75e
