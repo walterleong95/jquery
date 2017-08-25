@@ -1,21 +1,25 @@
 #!/bin/sh
 
 setup_git(){
-	git config --global user.email "travis@travis-ci.org"
-	git config --global user.name "Travis CI"
+	git config --global user.email "leonghoiweng@hotmail.com"
+	git config --global user.name "walterleong95"
 }
 
-commit_website_files(){
-	git checkout -b gh-pages
-	git add . *.html
+generate_code_cov(){
+	istanbul cover dist/jquery.js
+}
+commit_report_files(){
+	git checkout -b scc_project
+	git add .
 	git commit -m "Upload Code Coverage Report"
 }
 
 upload_files(){
-	git remote add origin-pages https://${GH_TOKEN}@github.com/MVSE-outreach/resources.git > /dev/null 2>&1
-	  git push --quiet --set-upstream origin-pages gh-pages
+	git remote add origin-scc_project https://github.com/walterleong95/jquery.git
+	  git push --quiet --set-upstream origin-scc_project scc_project
 	 }
 
 	  setup_git
-	  commit_website_files
+	  generate_code_cov
+	  commit_report_files
 	  upload_files
