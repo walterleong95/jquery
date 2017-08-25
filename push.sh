@@ -11,7 +11,7 @@ generate_code_cov(){
 commit_report_files(){
 	git checkout -b scc_project
 	git add .
-	git commit -m "Upload Code Coverage Report"
+	git commit -m "Upload Code Coverage Report [skip ci]"
 }
 
 upload_files(){
