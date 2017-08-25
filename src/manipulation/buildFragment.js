@@ -66,7 +66,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	fragment.textContent = "";
 
 	i = 0;
-	
 	while ( ( elem = nodes[ i++ ] ) ) {
 
 		// Skip elements already in the context collection (trac-4087)
