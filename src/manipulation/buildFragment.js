@@ -66,15 +66,18 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	fragment.textContent = "";
 
 	i = 0;
-	while ( ( elem = nodes[ i++ ] ) ) {
-
-		// Skip elements already in the context collection (trac-4087)
-		if ( selection && jQuery.inArray( elem, selection ) > -1 ) {
-			if ( ignored ) {
-				ignored.push( elem );
+	
+	do
+	{
+		if ( selection && jQuery.inArray( elem, selection) > -1)
+		{ 
+  			if (ignored) {
+			   ignored.push (elem);
 			}
-			continue;
+	
+		continue;
 		}
+	}while((elem=nodes[i--]);
 
 		contains = jQuery.contains( elem.ownerDocument, elem );
 
