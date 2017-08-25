@@ -1,0 +1,59 @@
+5-step quick start guide to ESLint
+Contents:
+
+Install and configure
+Make ESLint enforce your preferred coding style
+Sport more errors with extra plugins
+Never forget to run ESLint: Make it automatic
+Get instant feedback by adding ESLint to your editor
+Step 1: Install and configure
+
+Installing ESLint is easy:
+
+Install NodeJS. You can install it using your favorite package manager, or from http://nodejs.org
+Install ESLint using npm install -g eslint
+ESLint is now available with the command eslint
+The easiest way to set up ESLint is using .eslintrc JSON file. I've created a skeleton for you, download the skeleton here
+
+Note that the ESLint configuration file allows comments, unlike normal JSON.
+
+For more information, the most important pieces of the documentation are:
+
+The rules list
+Configuration guide
+Step 2: Make ESLint enforce your preferred coding style
+
+Setup your .eslintrc file to enforce coding style using the stylistic rules. You can download my favored rule-set for coding style.
+
+Step 3: Spot more errors with extra plugins
+
+Additional plugins provide additional rules. Additional rules catch additional errors.
+
+Plugins are easy to set up:
+
+Download plugin using npm install name-of-plugin
+Add plugin into your .eslintrc, like so: plugins: [ "name-of-plugin" ]
+Some plugins for popular libraries:
+
+AngularJS
+React
+Backbone
+Some plugins also provide other useful rules. My favorite is one variable per var.
+
+You can find many more by searching for eslint on npm
+
+Step 4: Never forget to run ESLint: Make it automatic
+
+I recommend automating ESLint to your git commits. This way you will never commit in code that doesn't pass a check.
+
+I've created an example git hook that you can use.
+
+Download the git hook
+Place the file into .git/hooks/commit-msg. This should be where you created or cloned your git repository
+Now whenever you commit, ESLint will run and check any .js files for issues. If ESLint finds any issues, it will block the commit.
+
+Step 5: Get instant feedback by adding ESLint to your editor
+
+The final step is to get ESLint feedback directly into your editor. You can integrate ESLint into many popular editors, including SublimeText 3, Vim, Emacs, Eclipse, TextMate, Atom and WebStorm.
+
+Instructions for editor integrations can be found from the ESLint integrations pa
