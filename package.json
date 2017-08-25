@@ -56,6 +56,8 @@
     "requirejs": "2.3.3",
     "sinon": "2.3.7",
     "sizzle": "2.3.3",
+    "sloc": "0.2.0",
+    "static-code-analysis": "0.1.9",
     "strip-json-comments": "2.0.1",
     "testswarm": "1.1.0",
     "uglify-js": "3.0.24"
