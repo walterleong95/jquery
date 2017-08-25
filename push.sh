@@ -17,9 +17,9 @@ commit_report_files(){
 upload_files(){
 	echo GH_TOKEN=7ab01452590ca573641dd950246c30f4d2c7d4f8
 
-	git remote add origin-scc_project https://${GH_TOKEN}@github.com/walterleong95/jquery.git
-	 git push --quiet --set-upstream origin-scc_project scc_project
-	 }
+	git remote add origin-scc_project https://walterleong:$GITHUB_API_KEY@github.com/walterleong95/jquery.git
+	git push --quiet --set-upstream origin-scc_project scc_project
+}
 
 	  setup_git
 	  generate_code_cov
