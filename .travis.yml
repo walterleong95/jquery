@@ -17,8 +17,8 @@ script:
   - npm test
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
-  - timestamp=$(date +%s)
-  - jslint dist/jquery.js >> StaticCodeReports/$timestamp.txt
+  - timestamp=`date --rfc-3339=seconds`
+  - jslint dist/jquery.js >> StaticCodeReports/$timestamp_static_report.txt
   - docker build docker
 after-script:
   - bash push.sh
