@@ -10,13 +10,18 @@ addons:
     repo_token: 327a6a2090e4f706f77fff811d99d522228a35ef
 before-script:
   - npm install -g istanbul
+  - npm install -g jslint
+  - npm install -g codeclimate-test-reporter
 script:
   - npm run build
   - npm test
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
-  - bash push.sh
+  - timestamp=$(date +%s)
+  - jslint dist/jquery.js >> StaticCodeReports/$timestamp.txt
   - docker build docker
+after-script:
+  - bash push.sh
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
  
