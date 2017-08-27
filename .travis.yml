@@ -20,7 +20,6 @@ script:
   - timestamp=`date --rfc-3339=seconds`
   - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true 
   - docker build docker
-after-script:
   - bash push.sh
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
