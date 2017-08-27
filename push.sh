@@ -17,6 +17,5 @@ upload_files(){
 }
 
 	  setup_git
-	  generate_code_cov
 	  commit_report_files
 	  upload_files
