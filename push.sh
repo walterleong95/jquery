@@ -15,6 +15,7 @@ upload_files(){
 
 	git remote add origin scc_project https://walterleong95:$GITHUB_API_KEY@github.com/walterleong95/jquery.git
 	git push --set-upstream origin scc_project
+	git branch
 }
 
 	  setup_git
