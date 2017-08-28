@@ -35,10 +35,10 @@
 
 8. Producing Code/Test Coverage with Istanbul
    - Install Istanbul by using "***npm install -g istanbul***"
-   - enter the command ** istanbul cover <root>/dev/jquery/dist/jquery.js **
+   - enter the command ** istanbul cover <root>/jquery/dist/jquery.js **
    (**example**: ***istanbul cover /Users/hoiweng/Desktop/dev/jquery/dist/jquery.js***)
    - Coverage report can be found in the **coverage** folder
-   
+
 -----------------------------------------------
 Any queries please contact via **email** / **whatsapp**:
 **Walter Leong - walterleong.95@1utar.my / 018-2878594**
