@@ -9,8 +9,6 @@ addons:
   code_climate:
     repo_token: 327a6a2090e4f706f77fff811d99d522228a35ef
 before-script:
-  - git config --global user.email "leonghoiweng@hotmail.com"
-  - git config --global user.name "walterleong95"
   - npm install -g istanbul
   - npm install -g jslint
   - npm install --save-dev nyc
@@ -23,7 +21,5 @@ script:
   - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true
   - bash push.sh
   - docker build docker
-  - git checkout scc_project
-  - git merge test_cov
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
