@@ -4,9 +4,7 @@ setup_git(){
 	git config --global user.email "leonghoiweng@hotmail.com"
 	git config --global user.name "walterleong95"
 }
-code_cov(){
 
-}
 commit_report_files(){
 	git checkout -b scc_project
 	git add .

@@ -7,11 +7,11 @@ node_js:
 services: docker
 addons:
   code_climate:
-    repo_token: 327a6a2090e4f706f77fff811d99d522228a35ef
+    repo_token: 93cfe2acdd5ff5c2c7360f8fd163e587fcc3ee6994b791b3327f220b82e70430
 before-script:
   - npm install -g istanbul
   - npm install -g jslint
-  - npm install --save-dev nyc
+  - npm install -g --save-dev nyc
 script:  
   - nyc --reporter=lcov npm run build
   - nyc --reporter=lcov npm test
