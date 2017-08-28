@@ -6,7 +6,6 @@ setup_git(){
 }
 
 commit_report_files(){
-	git checkout -b scc_project
 	git add .
 	git commit -m "$TRAVIS_BUILD_NUMBER [skip ci]"
 }
