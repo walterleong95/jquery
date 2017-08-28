@@ -52,6 +52,7 @@
     "jshint": "2.9.5",
     "load-grunt-tasks": "3.5.2",
     "native-promise-only": "0.8.1",
+    "nyc": "11.1.0",
     "promises-aplus-tests": "2.1.2",
     "q": "1.5.0",
     "qunit-assert-step": "1.1.1",

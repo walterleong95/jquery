@@ -11,12 +11,12 @@ addons:
 before-script:
   - npm install -g istanbul
   - npm install -g jslint
+  - npm install --save-dev nyc
 script:
-  - npm run build
-  - npm test
+  - nyc npm run build
+  - nyc npm test
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
-  - bash istanbul-cov.sh
   - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true
   - bash push.sh
   - docker build docker
