@@ -18,7 +18,7 @@ script:
   - nyc --reporter=lcov npm test
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
-  - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true
+  - jslint dist/jquery.js | tee StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log"
   - bash push.sh
   
 notifications:

@@ -1,0 +1,104 @@
+
+dist/jquery.js
+ #1 Unexpected space between '(' and 'function'.
+    ( function( global, factory ) { // Line 14, Pos 3
+ #2 Expected exactly one space between 'function' and '('.
+    ( function( global, factory ) { // Line 14, Pos 11
+ #3 Unexpected space between '(' and 'global'.
+    ( function( global, factory ) { // Line 14, Pos 13
+ #4 Unexpected space between 'factory' and ')'.
+    ( function( global, factory ) { // Line 14, Pos 29
+ #5 Use spaces, not tabs.
+    "use strict"; // Line 16, Pos 1
+ #6 Expected 'use strict' at column 5, not column 2.
+    "use strict"; // Line 16, Pos 2
+ #7 Use spaces, not tabs.
+    if ( typeof module === "object" && typeof module.exports === "object" ) { // Line 18, Pos 1
+ #8 Expected 'if' at column 5, not column 2.
+    if ( typeof module === "object" && typeof module.exports === "object" ) { // Line 18, Pos 2
+ #9 Unexpected space between '(' and 'typeof'.
+    if ( typeof module === "object" && typeof module.exports === "object" ) { // Line 18, Pos 7
+#10 Unexpected space between 'object' and ')'.
+    if ( typeof module === "object" && typeof module.exports === "object" ) { // Line 18, Pos 72
+#11 Use spaces, not tabs.
+    // For CommonJS and CommonJS-like environments where a proper `window` // Line 20, Pos 1
+#12 Use spaces, not tabs.
+    // is present, execute the factory and get jQuery. // Line 21, Pos 1
+#13 Use spaces, not tabs.
+    // For environments that do not have a `window` with a `document` // Line 22, Pos 1
+#14 Use spaces, not tabs.
+    // (such as Node.js), expose a factory as module.exports. // Line 23, Pos 1
+#15 Use spaces, not tabs.
+    // This accentuates the need for the creation of a real `window`. // Line 24, Pos 1
+#16 Use spaces, not tabs.
+    // e.g. var jQuery = require("jquery")(window); // Line 25, Pos 1
+#17 Use spaces, not tabs.
+    // See ticket #14549 for more info. // Line 26, Pos 1
+#18 Use spaces, not tabs.
+    module.exports = global.document ? // Line 27, Pos 1
+#19 Expected 'module' at column 9, not column 3.
+    module.exports = global.document ? // Line 27, Pos 3
+#20 Use spaces, not tabs.
+    factory( global, true ) : // Line 28, Pos 1
+#21 Expected 'factory' at column 17, not column 4.
+    factory( global, true ) : // Line 28, Pos 4
+#22 Unexpected space between '(' and 'global'.
+    factory( global, true ) : // Line 28, Pos 13
+#23 Unexpected space between 'true' and ')'.
+    factory( global, true ) : // Line 28, Pos 26
+#24 Use spaces, not tabs.
+    function( w ) { // Line 29, Pos 1
+#25 Expected 'function' at column 17, not column 4.
+    function( w ) { // Line 29, Pos 4
+#26 Expected exactly one space between 'function' and '('.
+    function( w ) { // Line 29, Pos 12
+#27 Unexpected space between '(' and 'w'.
+    function( w ) { // Line 29, Pos 14
+#28 Unexpected space between 'w' and ')'.
+    function( w ) { // Line 29, Pos 16
+#29 Use spaces, not tabs.
+    if ( !w.document ) { // Line 30, Pos 1
+#30 Expected 'if' at column 21, not column 5.
+    if ( !w.document ) { // Line 30, Pos 5
+#31 Unexpected space between '(' and '!'.
+    if ( !w.document ) { // Line 30, Pos 10
+#32 Unexpected space between 'document' and ')'.
+    if ( !w.document ) { // Line 30, Pos 22
+#33 Use spaces, not tabs.
+    throw new Error( "jQuery requires a window with a document" ); // Line 31, Pos 1
+#34 Expected 'throw' at column 25, not column 6.
+    throw new Error( "jQuery requires a window with a document" ); // Line 31, Pos 6
+#35 Unexpected space between '(' and 'jQuery requires a window with a document'.
+    throw new Error( "jQuery requires a window with a document" ); // Line 31, Pos 23
+#36 Unexpected space between 'jQuery requires a window with a document' and ')'.
+    throw new Error( "jQuery requires a window with a document" ); // Line 31, Pos 66
+#37 Use spaces, not tabs.
+    } // Line 32, Pos 1
+#38 Expected '}' at column 21, not column 5.
+    } // Line 32, Pos 5
+#39 Use spaces, not tabs.
+    return factory( w ); // Line 33, Pos 1
+#40 Expected 'return' at column 21, not column 5.
+    return factory( w ); // Line 33, Pos 5
+#41 Unexpected space between '(' and 'w'.
+    return factory( w ); // Line 33, Pos 21
+#42 Unexpected space between 'w' and ')'.
+    return factory( w ); // Line 33, Pos 23
+#43 Use spaces, not tabs.
+    }; // Line 34, Pos 1
+#44 Expected '}' at column 17, not column 4.
+    }; // Line 34, Pos 4
+#45 Use spaces, not tabs.
+    } else { // Line 35, Pos 1
+#46 Expected '}' at column 5, not column 2.
+    } else { // Line 35, Pos 2
+#47 Use spaces, not tabs.
+    factory( global ); // Line 36, Pos 1
+#48 Expected 'factory' at column 9, not column 3.
+    factory( global ); // Line 36, Pos 3
+#49 Unexpected space between '(' and 'global'.
+    factory( global ); // Line 36, Pos 12
+#50 Unexpected space between 'global' and ')'.
+    factory( global ); // Line 36, Pos 19
+#51 Too many errors. (0% scanned).
+     // Line 36, Pos 19
