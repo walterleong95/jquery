@@ -8,7 +8,7 @@ setup_git(){
 commit_report_files(){
 	git checkout -b scc_project
 	git add .
-	git commit -m "Upload Code Coverage Report [skip ci]"
+	git commit -m "Upload Code Coverage Report [ci skip]"
 }
 
 upload_files(){
