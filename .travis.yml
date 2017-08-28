@@ -12,10 +12,9 @@ before-script:
   - npm install -g istanbul
   - npm install -g jslint
   - npm install --save-dev nyc
-  - git checkout -b test_cov
-script:
-  - nyc npm run build
-  - nyc npm test
+script:  
+  - nyc --reporter=lcov npm run build
+  - nyc --reporter=lcov npm test
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
   - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true
