@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for jquery/build/tasks/build.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">jquery/build/tasks</a> build.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>52/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.35% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/62</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.62% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>52/122</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Special concat/build task to handle various jQuery build requirements
+ * Concats AMD modules, removes their definitions,
+ * and includes/excludes specified modules
+ */
+&nbsp;
+module.exports = function( grunt ) {
+&nbsp;
+	"use strict";
+&nbsp;
+	var fs = require( "fs" ),
+		requirejs = require( "requirejs" ),
+		Insight = require( "insight" ),
+		pkg = require( "../../package.json" ),
+		srcFolder = __dirname + "/../../src/",
+		rdefineEnd = /\}\s*?\);[^}\w]*$/,
+		read = function( fileName ) {
+			return grunt.file.read( srcFolder + fileName );
+		},
+&nbsp;
+		// Catch `// @CODE` and subsequent comment lines event if they don't start
+		// in the first column.
+		wrapper = read( "wrapper.js" ).split( /[\x20\t]*\/\/ @CODE\n(?:[\x20\t]*\/\/[^\n]+\n)*/ ),
+&nbsp;
+		config = {
+			baseUrl: "src",
+			name: "jquery",
+&nbsp;
+			// Allow strict mode
+			useStrict: true,
+&nbsp;
+			// We have multiple minify steps
+			optimize: "none",
+&nbsp;
+			// Include dependencies loaded with require
+			findNestedDependencies: true,
+&nbsp;
+			// Avoid inserting define() placeholder
+			skipModuleInsertion: true,
+&nbsp;
+			// Avoid breaking semicolons inserted by r.js
+			skipSemiColonInsertion: true,
+			wrap: {
+				start: wrapper[ 0 ].replace( /\/\*\s*eslint(?: |-).*\s*\*\/\n/, "" ),
+				end: wrapper[ 1 ]
+			},
+			rawText: {},
+			onBuildWrite: convert
+		};
+&nbsp;
+	/**
+	 * Strip all definitions generated by requirejs
+	 * Convert "var" modules to var declarations
+	 * "var module" means the module only contains a return
+	 * statement that should be converted to a var declaration
+	 * This is indicated by including the file in any "var" folder
+	 * @param {String} name
+	 * @param {String} path
+	 * @param {String} contents The contents to be written (including their AMD wrappers)
+	 */
+	function convert( name, path, contents ) {
+		var amdName;
+&nbsp;
+		// Convert var modules
+		if ( /.\/var\//.test( path.replace( process.cwd(), "" ) ) ) {
+			contents = contents
+				.replace(
+					/define\([\w\W]*?return/,
+					"var " +
+					( /var\/([\w-]+)/.exec( name )[ 1 ] ) +
+					" ="
+				)
+				.replace( rdefineEnd, "" );
+&nbsp;
+		// Sizzle treatment
+		} else if ( /\/sizzle$/.test( name ) ) {
+			contents = "var Sizzle =\n" + contents
+&nbsp;
+				// Remove EXPOSE lines from Sizzle
+				.replace( /\/\/\s*EXPOSE[\w\W]*\/\/\s*EXPOSE/, "return Sizzle;" );
+&nbsp;
+		} else {
+&nbsp;
+			contents = contents
+				.replace( /\s*return\s+[^\}]+(\}\s*?\);[^\w\}]*)$/, "$1" )
+&nbsp;
+				// Multiple exports
+				.replace( /\s*exports\.\w+\s*=\s*\w+;/g, "" );
+&nbsp;
+			// Remove define wrappers, closure ends, and empty declarations
+			contents = contents
+				.replace( /define\([^{]*?{\s*(?:("|')use strict\1(?:;|))?/, "" )
+				.replace( rdefineEnd, "" );
+&nbsp;
+			// Remove anything wrapped with
+			// /* ExcludeStart */ /* ExcludeEnd */
+			// or a single line directly after a // BuildExclude comment
+			contents = contents
+				.replace( /\/\*\s*ExcludeStart\s*\*\/[\w\W]*?\/\*\s*ExcludeEnd\s*\*\//ig, "" )
+				.replace( /\/\/\s*BuildExclude\n\r?[\w\W]*?\n\r?/ig, "" );
+&nbsp;
+			// Remove empty definitions
+			contents = contents
+				.replace( /define\(\[[^\]]*\]\)[\W\n]+$/, "" );
+		}
+&nbsp;
+		// AMD Name
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( ( amdName = grunt.option( "amd" ) ) != null &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >/^exports\/amd$/.test( name ) </span>) {
+<span class="cstat-no" title="statement not covered" >			if ( amdName ) {</span>
+<span class="cstat-no" title="statement not covered" >				grunt.log.writeln( "Naming jQuery with AMD name: " + amdName );</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				grunt.log.writeln( "AMD name now anonymous" );</span>
+			}
+&nbsp;
+			// Remove the comma for anonymous defines
+<span class="cstat-no" title="statement not covered" >			contents = contents</span>
+				.replace( /(\s*)"jquery"(\,\s*)/, amdName ? "$1\"" + amdName + "\"$2" : "" );
+&nbsp;
+		}
+		return contents;
+	}
+&nbsp;
+	grunt.registerMultiTask(
+		"build",
+		"Concatenate source, remove sub AMD definitions, " +
+			"(include/exclude modules with +/- flags), embed date/version",
+	function() {
+		var flag, index,
+			done = this.async(),
+			flags = this.flags,
+			optIn = flags[ "*" ],
+			name = grunt.option( "filename" ),
+			minimum = this.data.minimum,
+			removeWith = this.data.removeWith,
+			excluded = [],
+			included = [],
+			version = grunt.config( "pkg.version" ),
+&nbsp;
+			/**
+			 * Recursively calls the excluder to remove on all modules in the list
+			 * @param {Array} list
+			 * @param {String} [prepend] Prepend this to the module name.
+			 *  Indicates we're walking a directory
+			 */
+			excludeList = <span class="fstat-no" title="function not covered" >fu</span>nction( list, prepend ) {
+<span class="cstat-no" title="statement not covered" >				if ( list ) {</span>
+<span class="cstat-no" title="statement not covered" >					prepend = prepend ? prepend + "/" : "";</span>
+<span class="cstat-no" title="statement not covered" >					list.forEach( <span class="fstat-no" title="function not covered" >fu</span>nction( module ) {</span>
+&nbsp;
+						// Exclude var modules as well
+<span class="cstat-no" title="statement not covered" >						if ( module === "var" ) {</span>
+<span class="cstat-no" title="statement not covered" >							excludeList(</span>
+								fs.readdirSync( srcFolder + prepend + module ), prepend + module
+							);
+<span class="cstat-no" title="statement not covered" >							return;</span>
+						}
+<span class="cstat-no" title="statement not covered" >						if ( prepend ) {</span>
+&nbsp;
+							// Skip if this is not a js file and we're walking files in a dir
+<span class="cstat-no" title="statement not covered" >							if ( !( module = /([\w-\/]+)\.js$/.exec( module ) ) ) {</span>
+<span class="cstat-no" title="statement not covered" >								return;</span>
+							}
+&nbsp;
+							// Prepend folder name if passed
+							// Remove .js extension
+<span class="cstat-no" title="statement not covered" >							module = prepend + module[ 1 ];</span>
+						}
+&nbsp;
+						// Avoid infinite recursion
+<span class="cstat-no" title="statement not covered" >						if ( excluded.indexOf( module ) === -1 ) {</span>
+<span class="cstat-no" title="statement not covered" >							excluder( "-" + module );</span>
+						}
+					} );
+				}
+			},
+&nbsp;
+			/**
+			 * Adds the specified module to the excluded or included list, depending on the flag
+			 * @param {String} flag A module path relative to
+			 *  the src directory starting with + or - to indicate
+			 *  whether it should included or excluded
+			 */
+			excluder = <span class="fstat-no" title="function not covered" >fu</span>nction( flag ) {
+				var additional,
+					m = <span class="cstat-no" title="statement not covered" >/^(\+|\-|)([\w\/-]+)$/.exec( flag ),</span>
+					exclude = <span class="cstat-no" title="statement not covered" >m[ 1 ] === "-",</span>
+					module = <span class="cstat-no" title="statement not covered" >m[ 2 ];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				if ( exclude ) {</span>
+&nbsp;
+					// Can't exclude certain modules
+<span class="cstat-no" title="statement not covered" >					if ( minimum.indexOf( module ) === -1 ) {</span>
+&nbsp;
+						// Add to excluded
+<span class="cstat-no" title="statement not covered" >						if ( excluded.indexOf( module ) === -1 ) {</span>
+<span class="cstat-no" title="statement not covered" >							grunt.log.writeln( flag );</span>
+<span class="cstat-no" title="statement not covered" >							excluded.push( module );</span>
+&nbsp;
+							// Exclude all files in the folder of the same name
+							// These are the removable dependencies
+							// It's fine if the directory is not there
+<span class="cstat-no" title="statement not covered" >							try {</span>
+<span class="cstat-no" title="statement not covered" >								excludeList( fs.readdirSync( srcFolder + module ), module );</span>
+							} catch ( e ) {
+<span class="cstat-no" title="statement not covered" >								grunt.verbose.writeln( e );</span>
+							}
+						}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >						additional = removeWith[ module ];</span>
+&nbsp;
+						// Check removeWith list
+<span class="cstat-no" title="statement not covered" >						if ( additional ) {</span>
+<span class="cstat-no" title="statement not covered" >							excludeList( additional.remove || additional );</span>
+<span class="cstat-no" title="statement not covered" >							if ( additional.include ) {</span>
+<span class="cstat-no" title="statement not covered" >								included = included.concat( additional.include );</span>
+<span class="cstat-no" title="statement not covered" >								grunt.log.writeln( "+" + additional.include );</span>
+							}
+						}
+					} else {
+<span class="cstat-no" title="statement not covered" >						grunt.log.error( "Module \"" + module + "\" is a minimum requirement." );</span>
+<span class="cstat-no" title="statement not covered" >						if ( module === "selector" ) {</span>
+<span class="cstat-no" title="statement not covered" >							grunt.log.error(</span>
+								"If you meant to replace Sizzle, use -sizzle instead."
+							);
+						}
+					}
+				} else {
+<span class="cstat-no" title="statement not covered" >					grunt.log.writeln( flag );</span>
+<span class="cstat-no" title="statement not covered" >					included.push( module );</span>
+				}
+			};
+&nbsp;
+		// Filename can be passed to the command line using
+		// command line options
+		// e.g. grunt build --filename=jquery-custom.js
+		name = name ? ( "dist/" + name ) : <span class="branch-1 cbranch-no" title="branch not covered" >this.data.dest;</span>
+&nbsp;
+		// append commit id to version
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( process.env.COMMIT ) {
+<span class="cstat-no" title="statement not covered" >			version += " " + process.env.COMMIT;</span>
+		}
+&nbsp;
+		// figure out which files to exclude based on these rules in this order:
+		//  dependency explicit exclude
+		//  &gt; explicit exclude
+		//  &gt; explicit include
+		//  &gt; dependency implicit exclude
+		//  &gt; implicit exclude
+		// examples:
+		//  *                  none (implicit exclude)
+		//  *:*                all (implicit include)
+		//  *:*:-css           all except css and dependents (explicit &gt; implicit)
+		//  *:*:-css:+effects  same (excludes effects because explicit include is
+		//                     trumped by explicit exclude of dependency)
+		//  *:+effects         none except effects and its dependencies
+		//                     (explicit include trumps implicit exclude of dependency)
+		delete flags[ "*" ];
+		for ( flag in flags ) {
+<span class="cstat-no" title="statement not covered" >			excluder( flag );</span>
+		}
+&nbsp;
+		// Handle Sizzle exclusion
+		// Replace with selector-native
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( ( index = excluded.indexOf( "sizzle" ) ) &gt; -1 ) {
+<span class="cstat-no" title="statement not covered" >			config.rawText.selector = "define(['./selector-native']);";</span>
+<span class="cstat-no" title="statement not covered" >			excluded.splice( index, 1 );</span>
+		}
+&nbsp;
+		// Replace exports/global with a noop noConflict
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( ( index = excluded.indexOf( "exports/global" ) ) &gt; -1 ) {
+<span class="cstat-no" title="statement not covered" >			config.rawText[ "exports/global" ] = "define(['../core']," +</span>
+				"function( jQuery ) {\njQuery.noConflict = function() {};\n});";
+<span class="cstat-no" title="statement not covered" >			excluded.splice( index, 1 );</span>
+		}
+&nbsp;
+		grunt.verbose.writeflags( excluded, "Excluded" );
+		grunt.verbose.writeflags( included, "Included" );
+&nbsp;
+		// append excluded modules to version
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( excluded.length ) {
+<span class="cstat-no" title="statement not covered" >			version += " -" + excluded.join( ",-" );</span>
+&nbsp;
+			// set pkg.version to version with excludes, so minified file picks it up
+<span class="cstat-no" title="statement not covered" >			grunt.config.set( "pkg.version", version );</span>
+<span class="cstat-no" title="statement not covered" >			grunt.verbose.writeln( "Version changed to " + version );</span>
+&nbsp;
+			// Have to use shallow or core will get excluded since it is a dependency
+<span class="cstat-no" title="statement not covered" >			config.excludeShallow = excluded;</span>
+		}
+		config.include = included;
+&nbsp;
+		/**
+		 * Handle Final output from the optimizer
+		 * @param {String} compiled
+		 */
+		config.out = function( compiled ) {
+			compiled = compiled
+&nbsp;
+				// Embed Version
+				.replace( /@VERSION/g, version )
+&nbsp;
+				// Embed Date
+				// yyyy-mm-ddThh:mmZ
+				.replace( /@DATE/g, ( new Date() ).toISOString().replace( /:\d+\.\d+Z$/, "Z" ) );
+&nbsp;
+			// Write concatenated source to file
+			grunt.file.write( name, compiled );
+		};
+&nbsp;
+		// Turn off opt-in if necessary
+		<span class="missing-if-branch" title="if path not taken" >I</span>if ( !optIn ) {
+&nbsp;
+			// Overwrite the default inclusions with the explicit ones provided
+<span class="cstat-no" title="statement not covered" >			config.rawText.jquery = "define([" +</span>
+				( included.length ? included.join( "," ) : "" ) +
+			"]);";
+		}
+&nbsp;
+		// Trace dependencies and concatenate files
+		requirejs.optimize( config, function( response ) {
+			grunt.verbose.writeln( response );
+			grunt.log.ok( "File '" + name + "' created." );
+			done();
+		}, <span class="fstat-no" title="function not covered" >fu</span>nction( err ) {
+<span class="cstat-no" title="statement not covered" >			done( err );</span>
+		} );
+	} );
+&nbsp;
+	// Special "alias" task to make custom build creation less grawlix-y
+	// Translation example
+	//
+	//   grunt custom:+ajax,-dimensions,-effects,-offset
+	//
+	// Becomes:
+	//
+	//   grunt build:*:*:+ajax:-dimensions:-effects:-offset
+	grunt.registerTask( "custom", <span class="fstat-no" title="function not covered" >fu</span>nction() {
+		var args = <span class="cstat-no" title="statement not covered" >this.args,</span>
+			modules = <span class="cstat-no" title="statement not covered" >args.length ? args[ 0 ].replace( /,/g, ":" ) : "",</span>
+			done = <span class="cstat-no" title="statement not covered" >this.async(),</span>
+			insight = <span class="cstat-no" title="statement not covered" >new Insight( {</span>
+				trackingCode: "UA-1076265-4",
+				pkg: pkg
+			} );
+&nbsp;
+		function <span class="fstat-no" title="function not covered" >exec(</span> trackingAllowed ) {
+			var tracks = <span class="cstat-no" title="statement not covered" >args.length ? args[ 0 ].split( "," ) : [];</span>
+			var defaultPath = <span class="cstat-no" title="statement not covered" >[ "build", "custom" ];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			tracks = tracks.map( <span class="fstat-no" title="function not covered" >fu</span>nction( track ) {</span>
+<span class="cstat-no" title="statement not covered" >				return track.replace( /\//g, "+" );</span>
+			} );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			if ( trackingAllowed ) {</span>
+&nbsp;
+				// Track individuals
+<span class="cstat-no" title="statement not covered" >				tracks.forEach( <span class="fstat-no" title="function not covered" >fu</span>nction( module ) {</span>
+					var path = <span class="cstat-no" title="statement not covered" >defaultPath.concat( [ "individual" ], module );</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >					insight.track.apply( insight, path );</span>
+				} );
+&nbsp;
+				// Track full command
+<span class="cstat-no" title="statement not covered" >				insight.track.apply( insight, defaultPath.concat( [ "full" ], tracks ) );</span>
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			grunt.task.run( [ "build:*:*" + ( modules ? ":" + modules : "" ), "uglify", "dist" ] );</span>
+<span class="cstat-no" title="statement not covered" >			done();</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		grunt.log.writeln( "Creating custom build...\n" );</span>
+&nbsp;
+		// Ask for permission the first time
+<span class="cstat-no" title="statement not covered" >		if ( insight.optOut === undefined ) {</span>
+<span class="cstat-no" title="statement not covered" >			insight.askPermission( null, <span class="fstat-no" title="function not covered" >fu</span>nction( error, result ) {</span>
+<span class="cstat-no" title="statement not covered" >				exec( result );</span>
+			} );
+		} else {
+<span class="cstat-no" title="statement not covered" >			exec( !insight.optOut );</span>
+		}
+	} );
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Aug 28 2017 18:17:11 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
