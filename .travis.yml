@@ -19,7 +19,8 @@ script:
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
   - jslint dist/jquery.js | tee StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log"
-  - bash push.sh
+after-success:
+  - ./push.sh
   
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
