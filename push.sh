@@ -8,7 +8,7 @@ setup_git(){
 commit_report_files(){
 	git checkout -b scc_project
 	git add .
-	git commit -m "Upload Code Coverage Report [ci skip]"
+	git commit -m "$TRAVIS_BUILD_NUMBER [skip ci]"
 }
 
 upload_files(){
