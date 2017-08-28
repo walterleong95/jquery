@@ -6,13 +6,17 @@ setup_git(){
 }
 
 commit_report_files(){
+	git pull https://github.com/walterleong95/jquery.git scc_project
 	git add .
-	git commit -m "Upload Code Coverage Report" 
+	git commit -m "Upload Code Coverage Report"
+
 }
 
 upload_files(){
-	git remote add origin-scc_project https://walterleong95:$GITHUB_API_KEY@github.com/walterleong95/jquery.git
-	git push --set-upstream origin-scc_project test_cov
+	git remote add origin-test_cov https://walterleong95:$GITHUB_API_KEY@github.com/walterleong95/jquery.git
+	git push --set-upstream origin-test_cov test_cov
+	git checkout scc_project
+	git merge test_cov
 }
 
 	  setup_git
