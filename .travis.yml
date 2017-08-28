@@ -12,6 +12,7 @@ before-script:
   - npm install -g istanbul
   - npm install -g jslint
   - npm install --save-dev nyc
+  - git checkout -b test_cov
 script:
   - nyc npm run build
   - nyc npm test
@@ -20,5 +21,7 @@ script:
   - jslint dist/jquery.js > StaticCodeReports/"$(date +%Y-%m-%d_%H.%M%p).log" || true
   - bash push.sh
   - docker build docker
+  - git checkout scc_project
+  - git merge test_cov
 notifications:
     slack: sccjquery:OnTUmBipnCU3Rh9hhJJvl7rn
