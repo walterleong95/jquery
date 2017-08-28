@@ -8,7 +8,7 @@ setup_git(){
 commit_report_files(){
 	git pull
 	git add .
-	git commit -m "Upload Code Coverage Report" [skip ci]
+	git commit -m "Upload Code Coverage Report[skip ci]" 
 }
 
 upload_files(){
