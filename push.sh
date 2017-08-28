@@ -5,23 +5,17 @@ setup_git(){
 	git config --global user.name "walterleong95"
 }
 
-generate_code_cov(){
-	istanbul cover dist/jquery.js
-}
 commit_report_files(){
 	git checkout -b scc_project
 	git add .
-	git commit -m "Upload Code Coverage Report"
+	git commit -m "Upload Code Coverage Report [skip ci]"
 }
 
 upload_files(){
-	echo GH_TOKEN=7ab01452590ca573641dd950246c30f4d2c7d4f8
-
-	git remote add origin-scc_project https://${GH_TOKEN}@github.com/walterleong95/jquery.git
-	 git push --quiet --set-upstream origin-scc_project scc_project
-	 }
+	git remote add origin-scc_project https://walterleong95:$GITHUB_API_KEY@github.com/walterleong95/jquery.git
+	git push --set-upstream origin-scc_project scc_project
+}
 
 	  setup_git
-	  generate_code_cov
 	  commit_report_files
 	  upload_files
